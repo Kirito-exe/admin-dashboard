@@ -5,19 +5,38 @@ body{
 }
 .container{
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: minmax(300px,1fr) 4fr;
     grid-template-rows: minmax(1fr, 300px) 1fr;
     height: 100%;
     /* resize: both;
     overflow: auto; */
 }
 .sidebar{
-    background-color: skyblue;
+    background-color: #1992D4;
     grid-row:span 2;
+    display: grid;
+    align-items: start;
+    grid-template-rows: 100px 500px 1fr;
+    color: white;
+    padding-top:1em;
+    padding-left: 2em;
+}
+.nav ul{
+    list-style:none;
+    display: grid;
+    gap:1.3em;
+}
+.nav ul li{
+    font-size:1.6rem;
+    font-weight: bold;
+}
+.sidebar .heading{
+    font-size: 2rem;
+    font-weight: bold;
 }
 .header{
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: minmax(300px,3fr) 1fr;
     grid-template-rows: 1fr 1fr;
     background-color: white;
     align-items: center;
@@ -54,9 +73,9 @@ body{
     grid-template-rows: 1fr 1fr;
     gap:1rem;
     padding: 2em 1em;
+    align-items: start;
 }
 .projects{
-    grid-row:span 2;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     gap:0.5rem;
@@ -85,20 +104,21 @@ body{
 }
 .projects .card{
     border-left: 0.5em solid rgb(229, 229, 24);
-    height: 300px;
+    height: 250px;
     padding: 1em;
 }
 .trending .card{
     display: grid;
     grid-template-columns: 1fr 2fr;
     align-items: center;
-    margin-bottom: 0.2em;
+    margin-bottom: 0.4em;
 }
 .trending .card > img{
     object-fit:cover;
     width:max(50px,70%);
     min-width: 50px;
     border-radius: 50%;
+    margin: 0.2em;
 }
 form input[type="search"]{
     width: 90%;
@@ -111,7 +131,7 @@ form input[type="search"]{
 }
 .user > img{
     object-fit:contain;
-    width: min(30%,100px);
+    width: min(30%,70px);
     border-radius: 50%;
 }
 .user > div{
@@ -124,4 +144,36 @@ form input[type="search"]{
 }
 .annoucements ,.trending{
     padding:2em;
+}
+.project-container{
+    grid-row:span 2;
+}
+.project-container > h3, .annoucements-container > h3, .trending-container >h3{
+    margin-bottom: 0.5em;
+}
+svg{
+    width: 1.2em;
+    fill:white;
+    vertical-align:sub;
+    margin-right: 0.7em;
+}
+.footer svg{
+    fill:black;
+}
+.footer{
+    justify-self: end;
+}
+.header > svg{
+    width:1.4em;
+}
+.profile svg{
+    fill: black;
+    vertical-align: center;
+    width: 2rem;
+    justify-self: center;
+    align-self: center;
+}
+label svg{
+    fill:black;
+    
 }
