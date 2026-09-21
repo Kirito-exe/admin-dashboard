@@ -37,7 +37,7 @@ body{
 }
 .header{
     display: grid;
-    grid-template-columns: minmax(395px,3fr) 1fr;
+    grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
     background-color: white;
     align-items: center;
@@ -49,6 +49,7 @@ body{
     grid-template-columns: 50px 2fr;
     justify-items: start;
     gap:2em;
+    min-width: 289px;
 }
 .profile{
     display: grid;
@@ -75,12 +76,12 @@ body{
 }
 .content{
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 1fr 300px;
     grid-template-rows: 1fr 1fr;
     gap:1rem;
     padding: 2em 1em;
     align-items: stretch;
-    justify-content: stretch;
+    justify-content: center;
 }
 .projects{
     display: grid;
@@ -117,6 +118,7 @@ body{
     padding: 2em;
     align-self: start;
     font-size: 1rem;
+    align-content: space-between;
 }
 .card > .footer{
     align-self: end;
@@ -189,10 +191,15 @@ svg{
     justify-self: end;
     align-self: center;
 }
-label svg{
+form svg{
     fill:black;
     width: 1.5em;
-    
+    display: block;
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 .trending >.card > div >div:first-child{
     font-weight: bold;
