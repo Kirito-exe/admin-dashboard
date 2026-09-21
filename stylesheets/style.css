@@ -73,7 +73,8 @@ body{
     grid-template-rows: 1fr 1fr;
     gap:1rem;
     padding: 2em 1em;
-    align-items: start;
+    align-items: stretch;
+    justify-content: stretch;
 }
 .projects{
     display: grid;
@@ -144,6 +145,7 @@ form input[type="search"]{
 }
 .annoucements ,.trending{
     padding:2em;
+    height: 90%;
 }
 .project-container{
     grid-row:span 2;
@@ -177,3 +179,5 @@ label svg{
     fill:black;
     
 }
+
+
